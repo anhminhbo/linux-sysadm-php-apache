@@ -2,13 +2,13 @@
 
 header {
     background-color: #111111;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', serif;
     display: flex;
     color: white;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', serif;
 }
 
 .title {
@@ -105,4 +105,21 @@ footer {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+}
+
+.listings {
+    display: flex;
+    justify-content: space-around;
+}
+
+.house-tab {
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 10px 10px 5px lightslategray;
+    width: 400px;
+    border: solid 1px lightslategray;
+}
+
+.house-tab b {
+    margin-left: 53px;
 }

@@ -10,8 +10,8 @@
             <img src="/src/img/logo.png" height="130px"/>
         </div>
         <nav>
-            <div><a href="index.php">HOME</a></div>
-            <div><a href="listings.php">LISTINGS</a></div>
+            <div><a href="../index.php">HOME</a></div>
+            <div><a href="../src/listings.php">LISTINGS</a></div>
             <div><a href="contact.php">CONTACT</a></div>
             <div><a href="faq.php">FAQ</a></div>
             <div><a href="testimonial.php">TESTIMONIAL</a></div>
