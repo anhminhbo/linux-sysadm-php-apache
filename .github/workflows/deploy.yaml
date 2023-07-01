@@ -10,6 +10,7 @@ concurrency: build-deploy-kubernetes
 jobs:
   build-deploy-kubernetes:
     name: Build and deploy application to Kubernetes
+# Only run this when build and push job success
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
