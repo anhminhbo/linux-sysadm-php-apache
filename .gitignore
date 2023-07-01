@@ -1,0 +1,13 @@
+# For infra
+**/.terraform
+**/plan
+**/.terraform.lock.hcl
+**/.terraform.tfstate.lock.info
+
+**/terraform.tfstat*
+
+mysql_data
+
+# Mac
+**.DS_Store**
+**node_modules**

@@ -1,0 +1,46 @@
+name: "Production Deployment"
+run-name: ${{ github.actor }} is triggering Production Deployment🚀
+on:
+  workflow_run:
+    workflows: ["Build and Push Docker images"]
+    types:
+      - completed
+      
+concurrency: build-deploy-kubernetes
+jobs:
+  build-deploy-kubernetes:
+    name: Build and deploy application to Kubernetes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+
+      - name: Set up GCP Service Account Key credentials
+        uses: google-github-actions/setup-gcloud@v0.3.0
+        with:
+          service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+
+      - name: Download gke auth plugin
+        run: |
+          gcloud components install gke-gcloud-auth-plugin
+
+      # - name: Configure AWS credentials
+      #   uses: aws-actions/configure-aws-credentials@v1
+      #   with:
+      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #     aws-region: us-east-1
+
+      # - name: Login to Amazon ECR
+      #   id: login-ecr
+      #   uses: aws-actions/amazon-ecr-login@v1
+
+      # - name: Login to push to ECR
+      #   run: |
+      #     aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/y4r3b5d9
+
+      - name: Run Bash Script to Deploy
+        run: |
+          chmod +x deploy.sh
+          bash -x deploy.sh

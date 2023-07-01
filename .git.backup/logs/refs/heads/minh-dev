@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 cc24ca7fbd432551a3a60318b0b8f90518c5b3f6 anhminhbo <wormscott12397@gmail.com> 1688135361 +0700	branch: Created from HEAD
+cc24ca7fbd432551a3a60318b0b8f90518c5b3f6 e12d74b25b17ff59a3cd77458f07a0427bc37cf5 anhminhbo <wormscott12397@gmail.com> 1688139833 +0700	commit: chore: init k8s infra using terraform and gke, set up domain, website
+e12d74b25b17ff59a3cd77458f07a0427bc37cf5 04b74a2a82e9925af168f5cfb8fcb2f85e0f2a0b anhminhbo <wormscott12397@gmail.com> 1688144607 +0700	commit: chore: init github action
+04b74a2a82e9925af168f5cfb8fcb2f85e0f2a0b a6d5e06785fd2973430d2e4292b00aec707dfd93 anhminhbo <wormscott12397@gmail.com> 1688150940 +0700	merge release: Fast-forward
+a6d5e06785fd2973430d2e4292b00aec707dfd93 dd8d95cfc29bc92929dd15ebe7c86bc2af09b09c anhminhbo <wormscott12397@gmail.com> 1688151098 +0700	commit: chore: update cmt for node pools image
+dd8d95cfc29bc92929dd15ebe7c86bc2af09b09c b1f30a0208bcba4b43d2e7917a74c26376327b83 anhminhbo <wormscott12397@gmail.com> 1688152107 +0700	merge release: Fast-forward
+b1f30a0208bcba4b43d2e7917a74c26376327b83 2cc949b00aae790b5e442e55fd229c611736f684 anhminhbo <wormscott12397@gmail.com> 1688152315 +0700	merge main: Fast-forward

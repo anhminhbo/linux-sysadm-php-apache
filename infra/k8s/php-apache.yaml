@@ -1,0 +1,70 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php-apache
+  namespace: linux-sysadm-rmit-prod
+spec:
+  selector:
+    matchLabels:
+      app: php-apache
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: php-apache
+    spec:
+      containers:
+        - image: anhminhbo/php-apache-linux-sysadm:4
+          name: php-apache
+
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: php-apache
+  namespace: linux-sysadm-rmit-prod
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+  type: ClusterIP
+  selector:
+    app: php-apache
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: php-apache
+  namespace: linux-sysadm-rmit-prod
+  annotations:
+    cert-manager.io/cluster-issuer: "cert-manager-global"
+    # nginx.ingress.kubernetes.io/configuration-snippet: |
+    #   proxy_set_header X-Real-IP $remote_addr;
+    #   proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    #   proxy_set_header X-Forwarded-Proto $scheme; # Adding this for secure https forward to backend
+    #   proxy_set_header Host $http_host;
+
+spec:
+  ingressClassName: nginx
+
+  tls:
+    - hosts:
+        - linux-sysadm-mkk.bug-fix-squad.com
+      secretName: php-apache-private-key
+  
+  rules:
+    - host: linux-sysadm-mkk.bug-fix-squad.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: php-apache
+                port:
+                  number: 80
+          

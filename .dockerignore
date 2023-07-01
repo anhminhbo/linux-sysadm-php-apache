@@ -1,0 +1,9 @@
+.github
+infra
+deploy.sh
+build_and_push.sh
+Dockerfile
+.gitignore
+mysql_data
+docker-compose.yaml
+README.md

@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+header {
+    background-color: #111111;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    color: white;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+    margin-left: 10px;
+}
+
+.title h1 {
+    margin-bottom: 0px;
+}
+
+header nav {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 100px;
+}
+
+header nav div {
+    padding: 5px;
+    margin-right: 25px;
+    font-size: large;
+}
+
+header nav div a {
+    text-decoration: none;
+    color: white;
+}
+
+.reason {
+    background-color: #f6f6f6;
+    padding: 40px;
+    padding-bottom: 80px;
+}
+
+body h1 {
+    font-size: 35px;
+    font-weight: 400;
+    margin-left: 60px;
+    margin-right:60px;
+    margin-bottom: 20px;
+}
+
+.overlay {
+    position: absolute; /* Sit on top of the page content */
+    width: 500px; /* Full width (cover the whole page) */
+    height: 150px; /* Full height (cover the whole page) */
+    top: 250px;
+    left: 35%;
+    bottom: 0;
+    background-color: white; /* Black background with opacity */
+    opacity: 65%;
+    z-index: 10; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    font-family: 'Montserrat', 'serif';
+}
+
+.overlay p {
+    font-size: 30px;
+}
+
+body p {
+    font-size: 20px;
+    margin-left: 60px;
+    margin-right:60px;
+    font-weight: 200;
+}
+
+body ul {
+    font-size: 20px;
+    margin-left: 60px;
+    margin-right:60px;
+    font-weight: 200;
+}
+
+body li {
+    margin-bottom: 10px;
+}
+
+.profile {
+    display: flex;
+    margin-left: 50px;
+}
+
+.profile-picture {
+    margin-left: 500px;
+    padding: 5px;
+    background-color: #f6f6f6;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}

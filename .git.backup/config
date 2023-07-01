@@ -1,0 +1,19 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = git@github.com-anhminhbo:kaisergrimlock/Ass2.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+[branch "minh-dev"]
+	remote = origin
+	merge = refs/heads/minh-dev
+[branch "release"]
+	remote = origin
+	merge = refs/heads/release
