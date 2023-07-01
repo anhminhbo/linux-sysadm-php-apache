@@ -23,7 +23,7 @@
         }
 
         // Connection successful, display success message
-        echo "<h1>MySQL Connection Successful!</h1>";
+        echo "<h1>MySQL Connection Successful test!</h1>";
 
         // Close the connection
         $conn->close();
