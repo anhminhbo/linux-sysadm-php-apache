@@ -27,8 +27,9 @@ jobs:
         run: |
           current=$(curl -s -S "https://registry.hub.docker.com/v2/repositories/${{ secrets.DOCKERHUB_REPO }}/tags" |  
           jq '."results"[]["name"]' | sed -n 1p | cut -d'"' -f2)
-          newBackendTag=`expr $current + 1`
-          echo "::set-output name=newImageTag::$(echo $newImageTag)"
+          newImageTag=`expr $current + 1`
+          echo "newImageTag=$(echo $newImageTag)" >> $GITHUB_OUTPUT
+          # echo "::set-output name=newImageTag::$(echo $newImageTag)"
 
       # Login to DockerHub
       - name: Login to Docker Hub

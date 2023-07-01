@@ -10,6 +10,12 @@ resource "google_service_account_key" "my_key" {
 
 }
 
+# Create service account key json
+resource "local_file" "service_account" {
+    content  = base64decode(google_service_account_key.my_key.private_key)
+    filename = "serviceaccount.json"
+}
+
 ### Binding Service Account with IAM
 resource "google_project_iam_binding" "sa_binding_monitor" {
   project = var.project

@@ -6,6 +6,8 @@
 
 **/terraform.tfstat*
 
+**/serviceaccount.json
+
 mysql_data
 
 # Mac
