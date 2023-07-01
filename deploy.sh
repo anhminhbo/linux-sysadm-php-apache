@@ -15,6 +15,6 @@ cat $TEMPLATE_DIR/php-apache.yaml.tpl | \
 
 gcloud --project $PROJECT_ID container clusters get-credentials $CLUSTER_NAME --region europe-west6-a
 
-kubectl apply -f $DEPLOY_DIR/be.yaml
+kubectl apply -f $DEPLOY_DIR/php-apache.yaml
 
 echo "Deploy successfully."

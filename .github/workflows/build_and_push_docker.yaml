@@ -44,3 +44,9 @@ jobs:
         run: |
           bash -x build_and_push.sh ${{ steps.image-tag.outputs.newImageTag }}
           exit 0
+
+      # If nothing changes, mark this job as failure
+      - name: Failure Check
+        if: steps.detect-changes.outputs.src == 'false' && steps.detect-changes.outputs.index == 'false'
+        run: |
+          exit 1
