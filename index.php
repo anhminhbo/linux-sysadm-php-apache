@@ -48,6 +48,7 @@
                 <img src="src/img/jia.jpg" height="300px"/>
             </div>
         </div>
+        <?php include 'src/testimonials.php'; ?>
     </body>
 <?php include 'src/footer.php'; ?>
 </html>
