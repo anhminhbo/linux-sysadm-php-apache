@@ -16,8 +16,8 @@ gcloud init
 gcloud auth application-default login
 ```
 
-- To output service account key or go to base64 decode online, and copy that json to Github action
+- To output service account key then go to base64 decode online, and copy that json to Github action
 
 ```
-terraform output kubernetes-service-account-secret-key | base64 -d -
+terraform output kubernetes-service-account-secret-key
 ```
