@@ -6,9 +6,6 @@
             <h2>Contact Us</h2>
             <p><a>example@gmail.com</a></p>
         </div>
-        <div class="link">
-            <img src='/src/img/footer.png' width=75%/>
-        </div>
-
+        <img src='/src/img/footer.png' width=50% height=80%/>
     </footer>
 </html>

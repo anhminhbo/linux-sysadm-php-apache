@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 header {
     background-color: #111111;
@@ -43,7 +44,6 @@ header nav div a {
 .reason {
     background-color: #f6f6f6;
     padding: 40px;
-    padding-bottom: 80px;
 }
 
 body h1 {
@@ -55,21 +55,28 @@ body h1 {
 }
 
 .overlay {
-    position: absolute; /* Sit on top of the page content */
-    width: 500px; /* Full width (cover the whole page) */
-    height: 150px; /* Full height (cover the whole page) */
-    top: 250px;
-    left: 35%;
-    bottom: 0;
-    background-color: white; /* Black background with opacity */
-    opacity: 65%;
-    z-index: 10; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
+    position: absolute;
+    height: 185px !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 150px;
+    background-color: white;
+    opacity: 0.65;
+    z-index: 10;
+    cursor: pointer;
     font-family: 'Montserrat', 'serif';
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .overlay p {
-    font-size: 30px;
+    font-size: 48px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: justify;
+    margin: 0 60px;
 }
 
 body p {
@@ -105,7 +112,16 @@ footer {
     background-color: black;
     color: white;
     padding: 20px;
-    margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+footer h2 {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+footer img {
+    vertical-align: unset;
 }
