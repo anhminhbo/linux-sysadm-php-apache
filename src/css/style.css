@@ -5,10 +5,13 @@ header {
     font-family: 'Montserrat', sans-serif;
     display: flex;
     color: white;
+    display: flex;
+    justify-content: space-between;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
 }
 
 .title {
