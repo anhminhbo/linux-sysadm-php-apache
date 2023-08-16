@@ -6,29 +6,6 @@
     </head>
     <?php include 'src/hero.php'; ?>
     <body>
-        <?php
-        // Local && Production
-        $servername = "mysql";
-        $username = "root";
-        $password = "admin123";
-        $dbname = "mysql";
-        $port = 3306;
-
-        // Create a connection
-        $conn = new mysqli($servername, $username, $password, $dbname, $port);
-
-        // Check the connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-
-        // Connection successful, display success message
-        echo "<h1>MySQL Connection Successful Test For Connection! Khuong</h1>";
-
-        // Close the connection
-        $conn->close();
-        ?>
-        
         <div class="reason">
             <h1>Looking for Real Estate Agent?</h1>
             <p>Cindy Lin Real Estate Team gets most of the business from REFERRALs.  Why? Because we provide the most trustworthy service to our clients, and our clients love us.  Email or call us today to find out more details. We offer free Buyer's Consultation and Listing Presentation to walk you through the home purchasing/listing process.</p>

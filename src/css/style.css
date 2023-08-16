@@ -121,9 +121,9 @@ footer {
     background-color: black;
     color: white;
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 40px; 
 }
 
 footer h2 {
@@ -133,6 +133,15 @@ footer h2 {
 
 footer img {
     vertical-align: unset;
+    width: 100%;
+}
+
+footer .copyright {
+    grid-column: 1 / span 2; 
+    text-align: center;
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .listings {

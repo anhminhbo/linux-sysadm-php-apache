@@ -5,7 +5,6 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 * {box-sizing: border-box; font-family: 'Montserrat', sans-serif;}
-body {font-family: Verdana, sans-serif;}
 .mySlides {display: none;}
 img {vertical-align: middle;}
 
