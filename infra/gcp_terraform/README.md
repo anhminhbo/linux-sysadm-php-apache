@@ -16,6 +16,10 @@ gcloud init
 gcloud auth application-default login
 ```
 
+```
+gcloud components install gke-gcloud-auth-plugin
+```
+
 - To output service account key then go to base64 decode online, and copy that json to Github action
 
 ```
