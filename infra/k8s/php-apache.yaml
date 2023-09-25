@@ -15,7 +15,7 @@ spec:
         app: php-apache
     spec:
       containers:
-        - image: anhminhbo/php-apache-linux-sysadm:4
+        - image: anhminhbo/php-apache-linux-sysadm:13
           name: php-apache
 
           ports:

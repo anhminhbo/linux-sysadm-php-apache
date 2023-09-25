@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: cert-manager-global
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: nca.minh8897@gmail.com  # Replace with your email address
+    privateKeySecretRef:
+      name: cert-manager-private-key
+    solvers:
+      - http01:
+          ingress:
+            class: nginx  # Replace with your Ingress controller class

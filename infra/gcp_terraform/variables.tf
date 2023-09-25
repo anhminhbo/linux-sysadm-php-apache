@@ -1,13 +1,13 @@
 variable "project" {
   description = "The project ID to host the cluster in"
   type        = string
-  default     = "spatial-vision-391414"
+  default     = "logical-pathway-400103"
 }
 
 variable "name" {
   description = "name of the kubernetes cluster"
   type        = string
-  default     = "minh-test-test-gke"
+  default     = "minh-gke-test-3"
 }
 
 variable "region" {
